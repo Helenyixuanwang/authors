@@ -52,7 +52,7 @@ const EditAuthor = (props) => {
             <h1>Edit Author</h1>
             <Link to="/authors/">Home</Link>
            
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form-div">
             {
                     errors.name?
                     <p style={{color:"red"}}>{ errors.name.message}</p>
@@ -60,8 +60,10 @@ const EditAuthor = (props) => {
                 }
                 <label>Name:</label>
                 <input type="text" value={name} onChange={(e)=> setName(e.target.value)} />
-                <button type="submit">Submit</button>
-                <Link to="/authors/">Cancel</Link>
+                <div>
+                <button className="submit-btn" type="submit">Submit</button>
+                <span className="cancel-link"><Link to="/authors/">Cancel</Link></span>
+                </div>
             </form>
         </div>
      );

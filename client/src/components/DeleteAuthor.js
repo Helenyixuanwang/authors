@@ -20,7 +20,7 @@ const DeleteAuthor = (props) => {
     }
 
     return(
-        <button onClick={deleteHandler}>
+        <button className="delete-btn" onClick={deleteHandler}>
         Delete 
         </button>
     )

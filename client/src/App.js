@@ -10,7 +10,7 @@ import CreateAuthor from './components/CreateAuthor';
 
 function App() {
   return (
-    <div >
+    <div className="App" >
       <h1>Favorite Authors</h1>
         
       <Router>

@@ -28,7 +28,7 @@ const AllAuthors = (props) => {
         <div>
             <Link to="/authors/new">Add an author</Link>
             <h2> We have quotes by</h2>
-            <table style={{border:"1px solid black",textAlign:"left",width:"50%"}}>
+            <table>
                 <thead>
                     <th>Author</th>
                     <th>Action available</th>
@@ -43,7 +43,7 @@ const AllAuthors = (props) => {
 
                                     <td >{author.name}</td>
                                     <td>
-                                        <Link to={"/authors/" + author._id + "/edit"}>Edit</Link>|
+                                       <span className="edit-btn"><Link to={"/authors/" + author._id + "/edit"}> Edit </Link> </span> |
                                         <DeleteAuthor authorId={author._id} afterDelete={updateAfterDelete} />
                                     </td>
                                   

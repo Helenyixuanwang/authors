@@ -31,16 +31,21 @@ const CreateAuthor = (props) => {
         <div>
             <Link to="/authors/">Home</Link>
             <h1>create Authors</h1>
-            <form onSubmit={handleSubmit}>
+            <p>Add a new author:</p>
+            <form onSubmit={handleSubmit} class="form-div">
             {
                     errors.name?
                     <p style={{color:"red"}}>{ errors.name.message}</p>
                     :null
                 }
-                <label>Name:</label>
+              <p> <label>Name:</label></p>  
+                
                 <input type="text" value={name} onChange={(e)=> setName(e.target.value)} />
-                <button type="submit">Submit</button>
-                <Link to="/authors/">Cancel</Link>
+                <div>
+                <button className="submit-btn" type="submit">Submit</button>
+                <span className="cancel-link"><Link to="/authors/">Cancel</Link></span>
+                </div>
+                
             </form>
         </div>
      );
